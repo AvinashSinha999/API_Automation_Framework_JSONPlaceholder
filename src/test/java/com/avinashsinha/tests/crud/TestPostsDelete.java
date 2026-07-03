@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class TestPostsDelete extends BaseTest {
 
-    private static final Logger logger = LogManager.getLogger(TestPostsDelete.class);
+    private static final Logger LOGGER = LogManager.getLogger(TestPostsDelete.class);
 
     @Test(groups = "Regression", priority = 1)
     @Owner("Avinash Sinha")
@@ -20,7 +20,7 @@ public class TestPostsDelete extends BaseTest {
 
         int id_e = 71;
 
-        logger.info("Send the API Request");
+        LOGGER.info("Send the API Request");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -33,7 +33,7 @@ public class TestPostsDelete extends BaseTest {
 
         System.out.println();
 
-        logger.info("End the API Request");
+        LOGGER.info("End the API Request");
 
     }
 
