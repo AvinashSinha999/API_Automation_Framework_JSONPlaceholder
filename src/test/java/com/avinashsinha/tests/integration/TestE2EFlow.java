@@ -17,14 +17,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestE2EFlow extends BaseTest {
 
-    private static final Logger logger = LogManager.getLogger(TestE2EFlow.class);
+    private static final Logger LOGGER = LogManager.getLogger(TestE2EFlow.class);
 
     @Test(groups = "QA", priority = 1)
     @Owner("Avinash Sinha")
     @Description("TC#1 : Step 1. Create the Post")
     public void testCreatePost_POST() {
 
-        logger.info("Start the Post Creation");
+        LOGGER.info("Start the Post Creation");
 
         // 1) build payload (can be dynamic or default)
         Map<String, Object> payload = payloadManager.createPostRequest();
@@ -61,7 +61,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("Complete the Post Creation");
+        LOGGER.info("Complete the Post Creation");
 
     }
 
@@ -71,7 +71,7 @@ public class TestE2EFlow extends BaseTest {
     @Description("TC#2 : Step 2. Detail of Posts")
     public void testDetailPosts_GET() {
 
-        logger.info("Show the Details of All Posts");
+        LOGGER.info("Show the Details of All Posts");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -83,7 +83,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("End the Details of All Posts");
+        LOGGER.info("End the Details of All Posts");
 
     }
 
@@ -94,7 +94,7 @@ public class TestE2EFlow extends BaseTest {
 
         int id_e = 81;
 
-        logger.info("Show the Details of Single Post by Id");
+        LOGGER.info("Show the Details of Single Post by Id");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -126,7 +126,7 @@ public class TestE2EFlow extends BaseTest {
 
         iTestContext.setAttribute("id", id);
 
-        logger.info("End the Details of Single Post");
+        LOGGER.info("End the Details of Single Post");
 
     }
 
@@ -137,7 +137,7 @@ public class TestE2EFlow extends BaseTest {
 
         int id_e = (int) iTestContext.getAttribute("id");
 
-        logger.info("Full Update the Post by Id");
+        LOGGER.info("Full Update the Post by Id");
 
         // 1) build payload (can be dynamic or default)
         Map<String, Object> payload = payloadManager.fullUpdatePostRequest();
@@ -173,7 +173,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("Complete the Full Updation");
+        LOGGER.info("Complete the Full Updation");
 
     }
 
@@ -184,7 +184,7 @@ public class TestE2EFlow extends BaseTest {
 
         int id_e = (int) iTestContext.getAttribute("id");
 
-        logger.info("Partial Update the Post by Id");
+        LOGGER.info("Partial Update the Post by Id");
 
         // 1) build payload (can be dynamic or default)
         Map<String, Object> payload = payloadManager.partialUpdatePostRequest();
@@ -216,7 +216,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("Complete the Partial Updation");
+        LOGGER.info("Complete the Partial Updation");
 
     }
 
@@ -227,7 +227,7 @@ public class TestE2EFlow extends BaseTest {
 
         int id_e = (int) iTestContext.getAttribute("id");
 
-        logger.info("Delete the Post by Id");
+        LOGGER.info("Delete the Post by Id");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -240,7 +240,7 @@ public class TestE2EFlow extends BaseTest {
 
         System.out.println();
 
-        logger.info("Deletion is Done");
+        LOGGER.info("Deletion is Done");
 
     }
 
