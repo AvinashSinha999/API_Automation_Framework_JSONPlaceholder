@@ -10,14 +10,14 @@ import org.testng.annotations.Test;
 
 public class TestPostsDetails extends BaseTest {
 
-    private static final Logger logger = LogManager.getLogger(TestPostsDetails.class);
+    private static final Logger LOGGER = LogManager.getLogger(TestPostsDetails.class);
 
     @Test(groups = "Regression", priority = 1)
     @Owner("Avinash Sinha")
     @Description("TC#1 : Step 1. Detail of Posts")
     public void testDetailPosts_GET() {
 
-        logger.info("Send the API Request");
+        LOGGER.info("Send the API Request");
 
         // 1) send request
         response = RestAssured.given(requestSpecification)
@@ -29,7 +29,7 @@ public class TestPostsDetails extends BaseTest {
 
         System.out.println();
 
-        logger.info("End the API Request");
+        LOGGER.info("End the API Request");
 
     }
 }
