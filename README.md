@@ -1,54 +1,62 @@
-# API Automation Framework – JSONPlaceholder
+# 🚀 API Automation Framework | JSONPlaceholder
 
-![Java](https://img.shields.io/badge/Java-11%2B-blue)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-IDE-000000?logo=intellijidea&logoColor=white)
+> A modular **API Automation Framework** built using **Java**, **Rest-Assured**, **TestNG**, **Maven**, **AssertJ**, and **Allure Reports** to automate testing of the **JSONPlaceholder Posts** endpoints.
+
+<p align="center">
+
+![Java](https://img.shields.io/badge/Java-11+-blue?logo=openjdk)
 ![Maven](https://img.shields.io/badge/Maven-Build%20Tool-C71A36?logo=apachemaven&logoColor=white)
-![TestNG](https://img.shields.io/badge/TestNG-Framework-brightgreen)
 ![RestAssured](https://img.shields.io/badge/RestAssured-API--Testing-yellowgreen)
+![TestNG](https://img.shields.io/badge/TestNG-Framework-brightgreen)
+![AssertJ](https://img.shields.io/badge/AssertJ-Assertions-orange)
 ![Allure](https://img.shields.io/badge/Allure-Reports-ff69b4)
+![Log4j2](https://img.shields.io/badge/Log4j2-Logging-yellow)
+
+</p>
 
 ---
 
-## 🗂️ Overview  
+# 🗂️ Overview
 
-This project is an **API Automation Framework** built to test the public [JSONPlaceholder](https://jsonplaceholder.typicode.com/) REST API service.
+This repository contains a modular **API Automation Framework** for testing the **JSONPlaceholder Posts** endpoints.
 
-It is developed using **Java**, **Rest-Assured**, **TestNG**, **Maven**, and **Allure Reports** to provide a scalable and maintainable automation setup.
+Built with **Java**, **Rest-Assured**, **TestNG**, and **Maven**, the framework demonstrates industry-standard API automation practices, including reusable payload management, centralized assertions, CRUD operations, end-to-end workflow testing, logging, and rich Allure reporting.
 
-The framework utilises **Map-based payloads**, which keep the design lightweight, flexible, and easy to maintain.
-
----
-
-## ⚙️ Tech Stack
-
-- **Java 11+**
-- **IntelliJ IDEA** – IDE for development
-- **Maven** – Build & dependency management
-- **Rest-Assured** – HTTP client for API automation
-- **TestNG** – Testing framework
-- **AssertJ** – Advanced assertions
-- **Allure Reports** – Reporting framework
+The framework uses **Map-based payload creation**, providing a lightweight and flexible approach for building dynamic request bodies while maintaining clean and reusable test code.
 
 ---
 
-## 🚀 Features
+# ✨ Features
 
-- Complete **CRUD** test automation for JSONPlaceholder ``/posts`` endpoint
-- **Map-based payload creation**
-- Modular framework design with clear separation of concerns:
-    - **Endpoints** for API URLs
-    - **Modules** for payload building
-    - **Assertions** for reusable validations
-    - **Test suites** grouped logically
-- Integrated **Allure Reporting** for interactive test results
-- Logging support via **Log4j2**
-- Lightweight, dependency-minimal structure
+- ✅ Complete CRUD API Automation
+- ✅ Modular Framework Design
+- ✅ Map-Based Payload Management
+- ✅ Centralized Assertion Utilities
+- ✅ End-to-End Integration Testing
+- ✅ TestNG Suite Execution
+- ✅ Log4j2 Logging
+- ✅ Allure Reporting
 
 ---
 
-## 🏗️ Project Structure
+# 🛠️ Tech Stack
 
-```bash
+| Technology | Usage |
+|------------|-------|
+| Java 11+ | Programming Language |
+| Maven | Dependency & Build Management |
+| Rest-Assured | API Automation |
+| TestNG | Test Framework |
+| AssertJ | Fluent Assertions |
+| Log4j2 | Logging |
+| Allure Reports | Test Reporting |
+| IntelliJ IDEA | Development IDE |
+
+---
+
+# 🏗️ Project Structure
+
+```text
 API_Automation_Framework_JSONPlaceholder/
 │
 ├── .idea/                                                  # IntelliJ config
@@ -65,84 +73,131 @@ API_Automation_Framework_JSONPlaceholder/
 ├── src/
 │   ├── main/
 │   │   ├── java/com.avinashsinha/
-│   │   │   ├── endpoints/                                  # API endpoints
-│   │   │   │   └── APIConstants.java
+│   │   │   ├── endpoints/
+│   │   │   │   └── APIConstants.java                       # API endpoint constants
 │   │   │   │
-│   │   │   └── modules/                                    # Payload Manager (Map-based)
-│   │   │       └── PayloadManager.java
+│   │   │   └── modules/
+│   │   │       └── PayloadManager.java                     # Payload Manager (Map-based)
 │   │   │
 │   │   └── resources/
 │   │       └── log4j2.xml                                  # Logging configuration
 │   │
 │   └── test/
-│       └── java/com.avinashsinha/
-│           ├── asserts/                                    # Assertion utilities
-│           │   └── AssertActions.java
-│           │
-│           ├── base/                                       # Base Test setup
-│           │   └── BaseTest.java
-│           │
-│           └── tests/
-│               ├── crud/                                   # CRUD Test Cases
-│               │   ├── TestPostsCreate.java
-│               │   ├── TestPostsDelete.java
-│               │   ├── TestPostsDetails.java
-│               │   ├── TestPostsDetailsById.java
-│               │   ├── TestPostsFullUpdate.java
-│               │   └── TestPostsPartialUpdate.java
-│               │
-│               ├── integration/                            # Integration Tests
-│               │   └── TestE2EFlow.java
-│               │
-│               └── sample/                                 # Sample Tests
-│                   └── TestIntegrationSample.java
+│       ├── java/com.avinashsinha/
+│       │   ├── asserts/
+│       │   │   └── AssertActions.java                      # Assertion utilities
+│       │   │
+│       │   ├── base/
+│       │   │   └── BaseTest.java                           # Base test configuration
+│       │   │
+│       │   └── tests/
+│       │       ├── crud/                                   # CRUD test cases
+│       │       │   ├── TestPostsCreate.java
+│       │       │   ├── TestPostsDelete.java
+│       │       │   ├── TestPostsDetails.java
+│       │       │   ├── TestPostsDetailsById.java
+│       │       │   ├── TestPostsFullUpdate.java
+│       │       │   └── TestPostsPartialUpdate.java
+│       │       │
+│       │       ├── integration/                            # End-to-end tests
+│       │       │   └── TestE2EFlow.java
+│       │       │
+│       │       └── sample/                                 # Sample Tests
+│       │           └── TestIntegrationSample.java
 │
 └── README.md
-
 ```
+
 ---
 
-## ▶️ Running Tests
+# 📦 Framework Components
 
-### Integration Test (Create Posts, Details, Update and Delete Posts)
+| Component | Description |
+|------------|-------------|
+| **APIConstants** | Stores all API endpoint constants |
+| **PayloadManager** | Builds reusable Map-based request payloads |
+| **BaseTest** | Provides common test setup and configuration |
+| **AssertActions** | Centralized assertion utilities |
+| **CRUD Tests** | Individual API CRUD test scenarios |
+| **Integration Tests** | End-to-end workflow validation |
+| **Resources** | Log4j2 configuration files |
+
+---
+
+# ✅ Test Coverage
+
+| Endpoint | Test Scenario |
+|-----------|---------------|
+| **POST** `/posts` | Create Post |
+| **GET** `/posts` | Retrieve All Posts |
+| **GET** `/posts/{id}` | Retrieve Post by ID |
+| **PUT** `/posts/{id}` | Full Update Post |
+| **PATCH** `/posts/{id}` | Partial Update Post |
+| **DELETE** `/posts/{id}` | Delete Post |
+| Workflow | End-to-End Integration Testing |
+
+---
+
+# ▶️ Running Tests
+
+Execute any TestNG suite using Maven.
+
+### Example
 
 ```bash
 mvn clean test -DsuiteXmlFile=testng_integration.xml
 ```
 
-#### Available TestNG XMLs
+### Available Test Suites
 
-- `testng_createPosts.xml`
-- `testng_deletePosts.xml`
-- `testng_detailsById.xml`
-- `testng_fullUpdate.xml`
-- `testng_partialUpdate.xml`
-- `testng_integration.xml`
-- `testng_sample.xml`
+| Suite | XML File |
+|--------|----------|
+| Create Post | `testng_createPosts.xml` |
+| Delete Post | `testng_deletePosts.xml` |
+| Post Details | `testng_detailsPostById.xml` |
+| Full Update | `testng_fullUpdate.xml` |
+| Partial Update | `testng_partialUpdate.xml` |
+| Sample Tests | `testng_sample.xml` |
+| End-to-End Flow | `testng_integration.xml` |
 
 ---
 
-## 📊 Reporting
-### Generate Allure Report
+# 📊 Allure Reports
+
+Generate the report using:
 
 ```bash
 allure serve allure-results
 ```
-  <img src="https://github.com/user-attachments/assets/a80f69c2-f0c8-4645-9493-b7db8072b528" alt="JSONPlaceholder Allure Report" width="1100">
 
-This will launch an interactive report in your browser.
+<p align="center">
+<img width="1100" src="https://github.com/user-attachments/assets/a80f69c2-f0c8-4645-9493-b7db8072b528" alt="JSONPlaceholder Allure Report">
+</p>
+
+The command launches an interactive Allure dashboard in your default browser.
 
 ---
-##  ✅ Example Payload with Map
+
+# 📝 Sample Map-Based Payload
 
 ```java
 Map<String, Object> payload = new LinkedHashMap<>();
-payload.put("title", "Automation Framework");
+
+payload.put("title", "API Automation Framework");
 payload.put("body", "Testing JSONPlaceholder APIs");
 payload.put("userId", 101);
 ```
----
-## 📌 Author
-👤 Avinash Sinha
 
 ---
+
+# 👨‍💻 Author
+
+**Avinash Sinha**
+
+If you found this repository helpful, consider giving it a ⭐ on GitHub.
+
+---
+
+# 📄 License
+
+This project is intended for **educational** and **learning purposes**.
