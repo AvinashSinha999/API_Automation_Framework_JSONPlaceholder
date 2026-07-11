@@ -18,24 +18,24 @@
 
 # 🗂️ Overview
 
-This repository contains a modular **API Automation Framework** for testing the **JSONPlaceholder Posts** endpoints.
+This repository contains a modular **API Automation Framework** developed for testing the **JSONPlaceholder Posts** endpoints using **Java**, **Rest-Assured**, **TestNG**, and **Maven**.
 
-Built with **Java**, **Rest-Assured**, **TestNG**, and **Maven**, the framework demonstrates industry-standard API automation practices, including reusable payload management, centralized assertions, CRUD operations, end-to-end workflow testing, logging, and rich Allure reporting.
+The framework demonstrates industry-standard API automation practices, including **CRUD operations**, **Map-based payload management**, **centralized assertions**, **end-to-end workflow testing**, **logging**, and **Allure reporting**.
 
-The framework uses **Map-based payload creation**, providing a lightweight and flexible approach for building dynamic request bodies while maintaining clean and reusable test code.
+Using a lightweight **Map<String, Object>** payload strategy, the framework provides a flexible and maintainable approach for building dynamic request bodies while promoting **clean architecture**, **code reusability**, and **scalable test automation**.
 
 ---
 
-# ✨ Features
+# ✨ Key Features
 
 - ✅ Complete CRUD API Automation
-- ✅ Modular Framework Design
+- ✅ Modular Framework Architecture
 - ✅ Map-Based Payload Management
 - ✅ Centralized Assertion Utilities
-- ✅ End-to-End Integration Testing
+- ✅ End-to-End Workflow Testing
 - ✅ TestNG Suite Execution
 - ✅ Log4j2 Logging
-- ✅ Allure Reporting
+- ✅ Rich Allure Reporting
 
 ---
 
@@ -59,13 +59,13 @@ The framework uses **Map-based payload creation**, providing a lightweight and f
 ```text
 API_Automation_Framework_JSONPlaceholder/
 │
-├── .idea/                                                  # IntelliJ config
+├── .idea/                                                  # IntelliJ configuration
 ├── .mvn/                                                   # Maven wrapper files
-├── allure-results/                                         # Allure results (auto-generated)
+├── allure-results/                                         # Allure execution results
 ├── logs/
-│   └── test.log                                            # Execution logs
+│   └── test.log                                            # Test execution logs
 │
-├── pom.xml                                                 # Project dependencies & build config
+├── pom.xml                                                 # Maven dependencies & build configuration
 ├── .gitignore
 │
 ├── testng_*.xml                                            # TestNG suite files
@@ -77,7 +77,7 @@ API_Automation_Framework_JSONPlaceholder/
 │   │   │   │   └── APIConstants.java                       # API endpoint constants
 │   │   │   │
 │   │   │   └── modules/
-│   │   │       └── PayloadManager.java                     # Payload Manager (Map-based)
+│   │   │       └── PayloadManager.java                     # Map-based payload manager
 │   │   │
 │   │   └── resources/
 │   │       └── log4j2.xml                                  # Logging configuration
@@ -99,10 +99,10 @@ API_Automation_Framework_JSONPlaceholder/
 │       │       │   ├── TestPostsFullUpdate.java
 │       │       │   └── TestPostsPartialUpdate.java
 │       │       │
-│       │       ├── integration/                            # End-to-end tests
+│       │       ├── integration/                            # End-to-end workflow tests
 │       │       │   └── TestE2EFlow.java
 │       │       │
-│       │       └── sample/                                 # Sample Tests
+│       │       └── sample/                                 # Sample test implementations
 │       │           └── TestIntegrationSample.java
 │
 └── README.md
@@ -115,16 +115,16 @@ API_Automation_Framework_JSONPlaceholder/
 | Component | Description |
 |------------|-------------|
 | **APIConstants** | Stores all API endpoint constants |
-| **PayloadManager** | Builds reusable Map-based request payloads |
-| **BaseTest** | Provides common test setup and configuration |
-| **AssertActions** | Centralized assertion utilities |
-| **CRUD Tests** | Individual API CRUD test scenarios |
-| **Integration Tests** | End-to-end workflow validation |
-| **Resources** | Log4j2 configuration files |
+| **PayloadManager** | Generates reusable Map-based request payloads |
+| **BaseTest** | Provides common test initialization and configuration |
+| **AssertActions** | Contains centralized assertion utilities |
+| **CRUD Tests** | Implements Create, Read, Update, Delete, and Patch API test scenarios |
+| **Integration Tests** | Validates complete end-to-end API workflows |
+| **Resources** | Stores Log4j2 configuration files |
 
 ---
 
-# ✅ Test Coverage
+# 🌐 API Coverage
 
 | Endpoint | Test Scenario |
 |-----------|---------------|
@@ -164,7 +164,7 @@ mvn clean test -DsuiteXmlFile=testng_integration.xml
 
 # 📊 Allure Reports
 
-Generate the report using:
+Generate and launch the Allure report using:
 
 ```bash
 allure serve allure-results
@@ -174,7 +174,7 @@ allure serve allure-results
 <img width="1100" src="https://github.com/user-attachments/assets/a80f69c2-f0c8-4645-9493-b7db8072b528" alt="JSONPlaceholder Allure Report">
 </p>
 
-The command launches an interactive Allure dashboard in your default browser.
+The command generates and opens an interactive **Allure dashboard** displaying execution results, logs, and test statistics.
 
 ---
 
@@ -190,14 +190,28 @@ payload.put("userId", 101);
 
 ---
 
+# ⭐ Repository Highlights
+
+- ✔ Modular API Automation Framework
+- ✔ Industry-Standard Project Structure
+- ✔ Complete CRUD API Testing
+- ✔ Rest-Assured + TestNG
+- ✔ Map-Based Payload Management
+- ✔ Centralized Assertions
+- ✔ End-to-End Integration Testing
+- ✔ Log4j2 Logging
+- ✔ Rich Allure Reporting
+
+---
+
 # 👨‍💻 Author
 
 **Avinash Sinha**
 
-If you found this repository helpful, consider giving it a ⭐ on GitHub.
+If you found this repository useful, consider giving it a ⭐.
 
 ---
 
 # 📄 License
 
-This project is intended for **educational** and **learning purposes**.
+This repository is intended for **educational** and **learning purposes**.
